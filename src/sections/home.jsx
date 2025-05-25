@@ -34,14 +34,14 @@ const Home = () => {
         <motion.img src={imgZidane} alt="" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[378px] md:w-[478px]" variants={scaleUpVariants} />
 
         {/* Middle Text Section - Hey There & I'm Zidane */}
-        <motion.div className="top-text flex items-center justify-between mb-24" variants={fadeUpVariants}>
-          <motion.h1 className="text-2xl sm:text-3xl md:text-6xl font-semibold flex items-center" variants={slideLeftVariants}>
+        <motion.div className="top-text flex items-center justify-between mb-72 md:mb-24" variants={fadeUpVariants}>
+          <motion.h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold flex items-center" variants={slideLeftVariants}>
             Hey There{" "}
             <motion.span variants={waveVariants}>
               <img src={waveEmoji} alt="" className="md:ms-2 w-8 md:w-16" />
             </motion.span>
           </motion.h1>
-          <motion.h1 className="text-2xl sm:text-3xl md:text-6xl font-semibold" variants={slideRightVariants}>
+          <motion.h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold" variants={slideRightVariants}>
             I'm Zidane
           </motion.h1>
         </motion.div>

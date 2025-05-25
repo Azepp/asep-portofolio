@@ -1,16 +1,13 @@
 import { Element } from "react-scroll";
 import { motion } from "framer-motion";
-import useIsInView from "../hooks/useInView";
 import containerVariants from "../animations/containerVariants";
 import slideDownVariants from "../animations/slideDownVariants";
 import workList from "../constants/workList";
 
 const Work = () => {
-  const { ref, isInView } = useIsInView(0.3, false);
-
   return (
     <Element name="work" id="work" className="pt-[80px]">
-      <motion.div className="flex flex-col gap-8" ref={ref} variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
+      <motion.div className="flex flex-col gap-8" variants={containerVariants}>
         <motion.h1 variants={slideDownVariants} className="text-center text-3xl md:text-5xl font-semibold">
           Featured Work
         </motion.h1>

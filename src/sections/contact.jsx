@@ -43,20 +43,19 @@ const Contact = () => {
           </a>
         </motion.div>
 
-        <motion.div variants={fadeUpVariants} className="flex gap-10 md:gap-12 justify-center md:text-2xl">
+        <motion.div variants={fadeUpVariants} className="flex gap-10 md:gap-12 justify-center text-base md:text-lg">
           {contactList.map((contact, index) => (
             <a
               href={contact.url}
               target="_blank"
               key={index}
               className="cursor-pointer z-20 flex justify-center text-white relative transition-colors duration-200
-             text-sm md:text-base 
-             before:content-[''] before:absolute before:bottom-[-6px] before:left-0 
-             before:w-0 before:h-[2px] before:bg-custom-yellow 
-             hover:before:w-full before:transition-all before:duration-300
-             hover:before:right-0 before:right-auto
-             active:before:w-full
-             active:before:left-0"
+before:content-[''] before:absolute before:bottom-[-6px] before:left-0 
+before:w-0 before:h-[2px] before:bg-custom-yellow 
+hover:before:w-full before:transition-all before:duration-300
+hover:before:right-0 before:right-auto
+active:before:w-full
+active:before:left-0"
             >
               {contact.name}
             </a>
