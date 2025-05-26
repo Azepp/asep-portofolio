@@ -7,11 +7,11 @@ import slideUpVariants from "../animations/slideUpVariants";
 import slideDownVariants from "../animations/slideDownVariants";
 
 const Service = () => {
-  const { ref, isInView } = useIsInView(0.2, false);
+  const { ref, hasBeenInView } = useIsInView(0.2);
 
   return (
     <Element name="service" id="service" className="scroll-mt-[280px] pt-[80px]">
-      <motion.div className="flex flex-col gap-16" ref={ref} variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
+      <motion.div className="flex flex-col gap-16" ref={ref} variants={containerVariants} initial="hidden" animate={hasBeenInView ? "visible" : "hidden"}>
         <motion.h1 variants={slideDownVariants} className="text-center text-3xl md:text-5xl font-semibold">
           What can I do for you
         </motion.h1>

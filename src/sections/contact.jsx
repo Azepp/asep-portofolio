@@ -12,11 +12,11 @@ import slideDownVariants from "../animations/slideDownVariants";
 import fadeUpVariants from "../animations/fadeUpVariants";
 
 const Contact = () => {
-  const { ref, isInView } = useIsInView(0.3, false);
+  const { ref, hasBeenInView } = useIsInView(0.3);
 
   return (
     <Element name="contact" id="contact" className="bg-black h-[100vh] mt-[80px] pt-[80px] flex justify-center items-center px-4 md:px-6 lg:px-18 relative">
-      <motion.div className="flex flex-col gap-14" ref={ref} variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
+      <motion.div className="flex flex-col gap-14" ref={ref} variants={containerVariants} initial="hidden" animate={hasBeenInView ? "visible" : "hidden"}>
         <motion.img variants={slideRightVariants} src={elipseTop} alt="" className="absolute top-0 right-0 w-[128px] md:w-[256px]" />
         <motion.img variants={slideLeftVariants} src={elipseBottom} alt="" className="absolute bottom-0 left-0 w-[128px] md:w-[256px]" />
 

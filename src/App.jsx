@@ -11,7 +11,7 @@ function App() {
       <div className="layout mx-4 md:mx-6 lg:mx-18">
         <Home />
         <Service />
-        {/* <Work /> */}
+        <Work />
       </div>
       <Contact />
     </div>

@@ -1,15 +1,19 @@
-import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { useInView as useFramerInView } from "framer-motion";
 
-const useIsInView = (threshold = 0.3, once = false) => {
+const useIsInView = (threshold = 0.3) => {
   const ref = useRef(null);
+  const isInView = useFramerInView(ref, { threshold });
 
-  const isInView = useInView(ref, {
-    threshold,
-    once,
-  });
+  const [hasBeenInView, setHasBeenInView] = useState(false);
 
-  return { ref, isInView };
+  useEffect(() => {
+    if (isInView && !hasBeenInView) {
+      setHasBeenInView(true); // Trigger sekali aja
+    }
+  }, [isInView, hasBeenInView]);
+
+  return { ref, hasBeenInView }; // Return yang udah final
 };
 
 export default useIsInView;

@@ -13,11 +13,11 @@ import scaleUpVariants from "../animations/scaleUpVariants";
 import useIsInView from "../hooks/useInView";
 
 const Home = () => {
-  const { ref, isInView } = useIsInView(0.3, false);
+  const { ref, hasBeenInView } = useIsInView(0.3);
 
   return (
     <Element name="home" id="home" className="relative h-[100vh] py-4 flex justify-center items-center pt-[80px] scroll-mt-[80px]">
-      <motion.div ref={ref} className="flex flex-col justify-between h-full items-stretch w-full" variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
+      <motion.div ref={ref} className="flex flex-col justify-between h-full items-stretch w-full" variants={containerVariants} initial="hidden" animate={hasBeenInView ? "visible" : "hidden"}>
         {/* Top Text Section */}
         <motion.div className="top-text flex justify-between" variants={fadeUpVariants}>
           <motion.h1 className="text-2xl sm:text-3xl md:text-4xl" variants={slideLeftVariants}>
