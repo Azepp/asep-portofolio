@@ -6,7 +6,8 @@ This project showcases my skills, projects, and creative work as a Front-End Dev
 ## 🚀 Tech Stack
 
 - **React.js** – JavaScript library for building user interfaces  
-- **Framer Motion** – Animation library for smooth, modern transitions and interactions
+- **Framer Motion** – Animation library for smooth, modern transitions and interactions  
+- **React Scroll** – Library for smooth scrolling navigation between page sections
 
 ## ✨ Features
 
