@@ -18,15 +18,15 @@ const Contact = () => {
   return (
     <Element name="contact" id="contact" className="bg-black h-[100vh] mt-[80px] pt-[80px] flex justify-center items-center px-4 md:px-6 lg:px-18 relative">
       <motion.div className="flex flex-col gap-14" ref={ref} variants={containerVariants} initial="hidden" animate={hasBeenInView ? "visible" : "hidden"}>
-        <motion.img variants={slideRightVariants} src={elipseTop} alt="" className="absolute top-0 right-0 w-[128px] md:w-[256px]" />
-        <motion.img variants={slideLeftVariants} src={elipseBottom} alt="" className="absolute bottom-0 left-0 w-[128px] md:w-[256px]" />
+        <motion.img variants={slideRightVariants} src={elipseTop} alt="" className="absolute top-0 right-0 w-[128px] md:w-[256px] hidden md:block" />
+        <motion.img variants={slideLeftVariants} src={elipseBottom} alt="" className="absolute bottom-0 left-0 w-[128px] md:w-[256px] hidden md:block" />
 
         <motion.h1 variants={slideDownVariants} className="text-4xl md:text-7xl font-bold text-center text-custom-yellow">
-          Siap Membangun <br /> Website untuk Bisnis Anda?
+          Siap Membangun <br className="hidden md:block" /> Website untuk Bisnis Anda?
         </motion.h1>
 
         <motion.p variants={fadeUpVariants} className="text-white text-base md:text-lg text-center">
-          AsepStudio membantu bisnis membangun website modern yang <br /> tidak hanya terlihat profesional, tetapi juga memperkuat brand <br /> dan meningkatkan kepercayaan pelanggan.
+          AsepStudio membantu bisnis membangun website modern yang <br className="hidden md:block" /> tidak hanya terlihat profesional, tetapi juga memperkuat brand <br className="hidden md:block" /> dan meningkatkan kepercayaan pelanggan.
         </motion.p>
 
         <motion.div variants={fadeUpVariants}>

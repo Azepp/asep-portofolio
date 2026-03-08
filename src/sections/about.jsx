@@ -19,7 +19,7 @@ const About = () => {
           <motion.h1 variants={slideDownVariants} className="text-3xl md:text-5xl font-semibold tracking-tighter">
             Tentang AsepStudio.
           </motion.h1>
-          <motion.p className="md:text-lg text-justify" variants={slideUpVariants}>
+          <motion.p className="text-sm md:text-lg text-justify" variants={slideUpVariants}>
             AsepStudio adalah layanan pembuatan website yang didirikan oleh Zidane Athallah Winata, seorang Web Designer dan Developer yang berfokus membantu bisnis membangun kehadiran digital yang profesional.
             <br />
             <br />
@@ -28,7 +28,7 @@ const About = () => {
             <br />
             <br />
             Dengan pengalaman membangun berbagai jenis website seperti company profile, landing page, dan website bisnis, AsepStudio siap membantu Anda memiliki website yang:
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 mt-2">
               <li className="flex items-center gap-2">
                 <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Desain modern dan profesional
               </li>

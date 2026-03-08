@@ -18,16 +18,16 @@ const Home = () => {
         <AnimatedBg />
 
         <motion.div className="top-text flex flex-col gap-6 items-center justify-center mb-12" variants={fadeUpVariants}>
-          <motion.h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold flex items-center tracking-tighter" variants={slideDownVariants}>
+          <motion.h1 className="text-3xl sm:text-5xl md:text-7xl font-semibold flex items-center tracking-tighter" variants={slideDownVariants}>
             Website Profesional untuk <br /> Bisnis yang Ingin Naik Level{" "}
           </motion.h1>
-          <motion.p className="  md:text-lg text-center" variants={slideUpVariants}>
+          <motion.p className="text-sm md:text-lg text-center" variants={slideUpVariants}>
             AsepStudio membantu bisnis dan brand membangun website modern <br className="hidden md:inline"/> yang meningkatkan kepercayaan pelanggan dan memperkuat kehadiran digital mereka.{" "}
           </motion.p>
         </motion.div>
 
         {/* Bottom Section */}
-        <motion.div className="top-text flex gap-4 justify-center items-end" variants={fadeUpVariants}>
+        <motion.div className="top-text flex flex-col md:flex-row gap-4 justify-center items-center md:items-end" variants={fadeUpVariants}>
           <Link to="work" spy={true} smooth={true} offset={-10} duration={500} className="cursor-pointer z-20">
             <motion.div className="py-4 px-6 bg-black flex gap-1 text-white font-medium md:text-md rounded-full hover:text-black hover:bg-yellow-400" variants={buttonVariants} whileHover="hover" whileTap="tap">
               <FaWhatsapp className="text-2xl" />

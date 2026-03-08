@@ -18,7 +18,7 @@ const Service = () => {
           <motion.h1 variants={slideDownVariants} className="text-center text-3xl md:text-5xl font-semibold tracking-tighter">
             Pricelist Layanan Kami
           </motion.h1>
-          <motion.p className="  md:text-lg text-center" variants={slideUpVariants}>
+          <motion.p className="text-sm md:text-lg text-center" variants={slideUpVariants}>
             Kami menyediakan berbagai paket pembuatan website yang dirancang untuk <br className="hidden md:block" /> kebutuhan bisnis modern. transparan, jelas, dan fokus membantu brand kamu berkembang secara digital.{" "}
           </motion.p>
         </div>
@@ -56,8 +56,8 @@ const Service = () => {
                   </motion.button>
                   <hr className="my-4" />
 
-                  <p className="text-lg">Pelayanan yang didapat:</p>
-                  <div className="description text-lg font-medium">{service.description}</div>
+                  <p className="md:text-lg">Pelayanan yang didapat:</p>
+                  <div className="description md:text-lg font-medium">{service.description}</div>
                 </div>
               </motion.div>
             </div>

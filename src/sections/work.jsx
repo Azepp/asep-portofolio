@@ -11,9 +11,9 @@ const Work = () => {
       <motion.div className="flex flex-col gap-8" variants={containerVariants}>
         <div className="title flex flex-col gap-4">
           <motion.h1 variants={slideDownVariants} className="text-center text-3xl md:text-5xl font-semibold tracking-tighter">
-            Project yang Telah Kami Kerjakan
+            Project yang <br className="block md:hidden" /> Telah Kami Kerjakan
           </motion.h1>
-          <motion.p className="  md:text-lg text-center" variants={slideUpVariants}>
+          <motion.p className="text-sm  md:text-lg text-center" variants={slideUpVariants}>
             Kami membantu berbagai bisnis membangun website yang memperkuat <br className="hidden md:block" /> brand mereka dan meningkatkan kepercayaan pelanggan.
           </motion.p>
         </div>
