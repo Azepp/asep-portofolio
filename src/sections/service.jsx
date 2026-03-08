@@ -5,27 +5,62 @@ import { motion } from "framer-motion";
 import containerVariants from "../animations/containerVariants";
 import slideUpVariants from "../animations/slideUpVariants";
 import slideDownVariants from "../animations/slideDownVariants";
+import buttonVariants from "../animations/buttonVariants";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Service = () => {
   const { ref, hasBeenInView } = useIsInView(0.2);
 
   return (
     <Element name="service" id="service" className="scroll-mt-[280px] pt-[80px]">
-      <motion.div className="flex flex-col gap-16" ref={ref} variants={containerVariants} initial="hidden" animate={hasBeenInView ? "visible" : "hidden"}>
-        <motion.h1 variants={slideDownVariants} className="text-center text-3xl md:text-5xl font-semibold">
-          What can I do for you
-        </motion.h1>
+      <motion.div className="flex flex-col gap-8 lg:gap-20" ref={ref} variants={containerVariants} initial="hidden" animate={hasBeenInView ? "visible" : "hidden"}>
+        <div className="title flex flex-col gap-4">
+          <motion.h1 variants={slideDownVariants} className="text-center text-3xl md:text-5xl font-semibold tracking-tighter">
+            Pricelist Layanan Kami
+          </motion.h1>
+          <motion.p className="  md:text-lg text-center" variants={slideUpVariants}>
+            Kami menyediakan berbagai paket pembuatan website yang dirancang untuk <br className="hidden md:block" /> kebutuhan bisnis modern. transparan, jelas, dan fokus membantu brand kamu berkembang secara digital.{" "}
+          </motion.p>
+        </div>
 
-        <motion.div variants={slideUpVariants} className="grid lg:grid-cols-3 gap-6">
+        <motion.div variants={slideUpVariants} className="grid lg:grid-cols-3 gap-10 md:gap-6 items-stretch">
           {serviceList.map((service, index) => (
-            <motion.div variants={service.animation} key={index} className="flex flex-col gap-42 border-s-3 border-neutral-400 ps-4 py-4">
-              <h1 className="text-5xl font-semibold text-neutral-400">0{index + 1}</h1>
+            <div key={index} className="flex flex-col relative">
+              {service.bestSeller && (
+                <div className="bg-custom-yellow rounded-t-lg px-5 pt-3 pb-3 text-center absolute top-2 md:-top-12 w-full">
+                  <span className=" font-medium tracking-tight text-lg">Paling Banyak Dipilih</span>
+                </div>
+              )}
 
-              <div className="bottom">
-                <h2 className="text-2xl font-semibold mb-2">{service.title}</h2>
-                <p>{service.description}</p>
-              </div>
-            </motion.div>
+              <motion.div
+                variants={service.animation}
+                className={`flex flex-col flex-1 px-5 py-7
+          ${service.bestSeller ? "border-4 border-custom-yellow rounded-lg shadow-md mt-12 md:mt-0" : "border border-neutral-300 rounded-lg shadow-md"}`}
+              >
+                <div className="flex flex-col gap-2 flex-1">
+                  <h2 className="text-3xl font-semibold tracking-tight">{service.title}</h2>
+
+                  <div className="price">
+                    <p>Mulai dari:</p>
+                    <h1 className="text-3xl font-semibold tracking-tight">{service.price}</h1>
+                  </div>
+
+                  <motion.button
+                    className="py-4 px-6 bg-black flex gap-1 text-white font-medium cursor-pointer md:text-md rounded-full hover:text-black hover:bg-yellow-400 w-full items-center justify-center mt-2"
+                    variants={buttonVariants}
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
+                    <FaWhatsapp className="text-2xl" />
+                    Pesan Sekarang
+                  </motion.button>
+                  <hr className="my-4" />
+
+                  <p className="text-lg">Pelayanan yang didapat:</p>
+                  <div className="description text-lg font-medium">{service.description}</div>
+                </div>
+              </motion.div>
+            </div>
           ))}
         </motion.div>
       </motion.div>

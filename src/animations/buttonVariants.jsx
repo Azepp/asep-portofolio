@@ -12,7 +12,7 @@ const buttonVariants = {
     },
   },
   hover: {
-    scale: 1.05, // Membesar 5% saat hover
+    scale: 1.02, // Membesar 5% saat hover
     transition: {
       duration: 0.15,
       ease: "easeInOut",

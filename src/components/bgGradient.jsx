@@ -36,7 +36,7 @@ export default function AnimatedBgWrapper() {
       {/* Ini background yang bergerak (z-index rendah) */}
       <div className="absolute left-1/2 transform -translate-x-1/2 w-full h-full -z-40 flex items-center justify-center pointer-events-none">
         <div
-          className="h-1/4 w-full bg-yellow-400 mb-36 blur-[128px] transition-transform duration-500"
+          className="h-1/4 w-1/2 bg-yellow-400 mb-36 blur-[128px] transition-transform duration-500"
           style={{
             transform: `translateX(${direction * transformDistance}px)`,
             transitionDuration: "1500ms",

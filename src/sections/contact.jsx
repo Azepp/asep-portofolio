@@ -10,6 +10,7 @@ import slideRightVariants from "../animations/slideRightVariants";
 import slideLeftVariants from "../animations/slideLeftVariants";
 import slideDownVariants from "../animations/slideDownVariants";
 import fadeUpVariants from "../animations/fadeUpVariants";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const { ref, hasBeenInView } = useIsInView(0.3);
@@ -21,24 +22,18 @@ const Contact = () => {
         <motion.img variants={slideLeftVariants} src={elipseBottom} alt="" className="absolute bottom-0 left-0 w-[128px] md:w-[256px]" />
 
         <motion.h1 variants={slideDownVariants} className="text-4xl md:text-7xl font-bold text-center text-custom-yellow">
-          Let’s start <br /> Project Together?
+          Siap Membangun <br /> Website untuk Bisnis Anda?
         </motion.h1>
 
         <motion.p variants={fadeUpVariants} className="text-white text-base md:text-lg text-center">
-          {`Feel free to reach out for collaborations, freelance work, or even just a friendly chat.`}
-          <br />
-          {` Appreciate your time stopping by — let’s create something amazing together.`}
+          AsepStudio membantu bisnis membangun website modern yang <br /> tidak hanya terlihat profesional, tetapi juga memperkuat brand <br /> dan meningkatkan kepercayaan pelanggan.
         </motion.p>
 
         <motion.div variants={fadeUpVariants}>
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=zidanathallahwinata@gmail.com&su=Collaboration%20Inquiry&body=Dear%20Zidane%2C%0A%0AI%20hope%20this%20message%20finds%20you%20well.%20I%20am%20reaching%20out%20to%20discuss%20a%20potential%20collaboration.%20Let%20me%20know%20your%20availability.%0A%0ABest%20regards%2C%0A%5BYour%20Name%5D"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer z-20 flex justify-center"
-          >
-            <motion.div className="py-2.5 px-6 w-fit md:text-2xl font-semibold md:text-md rounded-full bg-custom-yellow text-black" variants={buttonVariants} whileHover="hover" whileTap="tap">
-              zidanathallahwinata@gmail.com
+          <a href="" target="_blank" rel="noopener noreferrer" className="cursor-pointer z-20 flex justify-center">
+            <motion.div className="flex gap-2 items-center py-3 px-6 w-fit md:text-2xl font-semibold md:text-md rounded-full bg-custom-yellow text-black" variants={buttonVariants} whileHover="hover" whileTap="tap">
+              <FaWhatsapp className="text-3xl" />
+              Konsultasi Sekarang
             </motion.div>
           </a>
         </motion.div>

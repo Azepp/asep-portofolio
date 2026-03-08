@@ -1,7 +1,7 @@
 const contactList = [
   {
     name: "Instagram",
-    url: "https://www.instagram.com/mjolnir9223?igsh=MXdqYWl5dDZ3Mng4OQ==",
+    url: "https://www.instagram.com/asep_designer?igsh=MXJzb2M0MjllcDRjZw==",
   },
   {
     name: "LinkedIn",

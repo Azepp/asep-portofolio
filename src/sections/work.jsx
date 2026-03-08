@@ -3,14 +3,20 @@ import { motion } from "framer-motion";
 import containerVariants from "../animations/containerVariants";
 import slideDownVariants from "../animations/slideDownVariants";
 import workList from "../constants/workList";
+import slideUpVariants from "../animations/slideUpVariants";
 
 const Work = () => {
   return (
     <Element name="work" id="work" className="pt-[80px]">
       <motion.div className="flex flex-col gap-8" variants={containerVariants}>
-        <motion.h1 variants={slideDownVariants} className="text-center text-3xl md:text-5xl font-semibold">
-          Featured Work
-        </motion.h1>
+        <div className="title flex flex-col gap-4">
+          <motion.h1 variants={slideDownVariants} className="text-center text-3xl md:text-5xl font-semibold tracking-tighter">
+            Project yang Telah Kami Kerjakan
+          </motion.h1>
+          <motion.p className="  md:text-lg text-center" variants={slideUpVariants}>
+            Kami membantu berbagai bisnis membangun website yang memperkuat <br className="hidden md:block" /> brand mereka dan meningkatkan kepercayaan pelanggan.
+          </motion.p>
+        </div>
 
         <div className="grid grid-cols-12 gap-6">
           {workList.map((work, index) => (
