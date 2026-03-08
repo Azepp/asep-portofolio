@@ -14,7 +14,7 @@ const ImagesHome = ({ gap = "24px", cardHeight = "300px" }) => {
     const track = trackRef.current;
     if (!track) return;
 
-    const speed = 0.8;
+    const speed = 0.5;
 
     const animate = () => {
       if (!pausedRef.current) {
@@ -32,8 +32,27 @@ const ImagesHome = ({ gap = "24px", cardHeight = "300px" }) => {
     return () => cancelAnimationFrame(animationRef.current);
   }, []);
 
+  const handleWheel = (e) => {
+    e.preventDefault();
+    const track = trackRef.current;
+    if (!track) return;
+
+    const delta = e.deltaX;
+    if (delta === 0) return;
+    posRef.current -= delta * 1.5;
+
+    const halfWidth = track.scrollWidth / 2;
+    if (posRef.current > 0) {
+      posRef.current = -halfWidth + posRef.current;
+    } else if (Math.abs(posRef.current) >= halfWidth) {
+      posRef.current = posRef.current + halfWidth;
+    }
+
+    track.style.transform = `translateX(${posRef.current}px)`;
+  };
+
   return (
-    <div className="overflow-hidden images-home" onMouseEnter={() => (pausedRef.current = true)} onMouseLeave={() => (pausedRef.current = false)}>
+    <div className="overflow-hidden images-home" onMouseEnter={() => (pausedRef.current = true)} onMouseLeave={() => (pausedRef.current = false)} onWheel={handleWheel}>
       <div ref={trackRef} className="flex w-max" style={{ willChange: "transform", gap }}>
         {items.map((work, index) => (
           <a
@@ -52,7 +71,7 @@ const ImagesHome = ({ gap = "24px", cardHeight = "300px" }) => {
           >
             <img src={work.image} alt={work.name} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="mt-4 border border-white text-white w-32 h-32 flex flex-col justify-center items-center font-medium  rounded-full hover:bg-white hover:text-black transition-colors duration-200">
+              <span className="mt-4 border border-white text-white w-32 h-32 flex flex-col justify-center items-center font-medium rounded-full hover:bg-white hover:text-black transition-colors duration-200">
                 <MdOutlineArrowOutward className="text-2xl" />
                 Lihat Detail
               </span>

@@ -46,7 +46,7 @@ const Contact = () => {
               key={index}
               className="cursor-pointer z-20 flex justify-center text-white relative transition-colors duration-200
 before:content-[''] before:absolute before:bottom-[-6px] before:left-0 
-before:w-0 before:h-[2px] before:bg-custom-yellow 
+before:w-0 before:h-[3px] before:bg-custom-yellow 
 hover:before:w-full before:transition-all before:duration-300
 hover:before:right-0 before:right-auto
 active:before:w-full

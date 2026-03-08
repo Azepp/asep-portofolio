@@ -28,7 +28,7 @@ const Service = () => {
             <div key={index} className="flex flex-col relative">
               {service.bestSeller && (
                 <div className="bg-custom-yellow rounded-t-lg px-5 pt-3 pb-3 text-center absolute top-2 md:-top-12 w-full">
-                  <span className=" font-medium tracking-tight text-lg">Paling Banyak Dipilih</span>
+                  <span className=" font-medium tracking-tight text-lg">Paling Banyak Dipesan</span>
                 </div>
               )}
 
