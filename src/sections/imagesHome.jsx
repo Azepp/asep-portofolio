@@ -1,12 +1,16 @@
 import { useRef, useEffect } from "react";
 import imagesHomeList from "../constants/imagesHomeList";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { motion } from "framer-motion";
+import useIsInView from "../hooks/useInView";
 
 const ImagesHome = ({ gap = "24px", cardHeight = "300px" }) => {
   const trackRef = useRef(null);
   const animationRef = useRef(null);
   const posRef = useRef(0);
   const pausedRef = useRef(false);
+
+  const { ref, hasBeenInView } = useIsInView(0.2);
 
   const items = [...imagesHomeList, ...imagesHomeList];
 
@@ -52,7 +56,16 @@ const ImagesHome = ({ gap = "24px", cardHeight = "300px" }) => {
   };
 
   return (
-    <div className="overflow-hidden images-home" onMouseEnter={() => (pausedRef.current = true)} onMouseLeave={() => (pausedRef.current = false)} onWheel={handleWheel}>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="overflow-hidden images-home"
+      onMouseEnter={() => (pausedRef.current = true)}
+      onMouseLeave={() => (pausedRef.current = false)}
+      onWheel={handleWheel}
+    >
       <div ref={trackRef} className="flex w-max" style={{ willChange: "transform", gap }}>
         {items.map((work, index) => (
           <a
@@ -79,7 +92,7 @@ const ImagesHome = ({ gap = "24px", cardHeight = "300px" }) => {
           </a>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

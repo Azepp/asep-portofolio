@@ -2,8 +2,8 @@ import { useEffect, useState, useRef } from "react";
 import navLinks from "../constants/navLinks";
 import { Link } from "react-scroll";
 import { FaWhatsapp } from "react-icons/fa";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { IoCloseOutline } from "react-icons/io5";
+import { HiBars2 } from "react-icons/hi2";
+import { CgClose } from "react-icons/cg";
 
 function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -190,7 +190,7 @@ function Navbar() {
                 }}
               >
                 <button className="cursor-pointer p-1" onClick={() => setIsMenuOpen((prev) => !prev)} aria-label="Toggle menu">
-                  {isMenuOpen ? <IoCloseOutline className="text-4xl text-black" /> : <RxHamburgerMenu className="text-3xl text-black" />}
+                  {isMenuOpen ? <CgClose className="text-3xl text-black" /> : <HiBars2 className="text-3xl text-black" />}
                 </button>
               </div>
             </div>
@@ -199,7 +199,7 @@ function Navbar() {
           {/* ── Mobile & Tablet: Hamburger ── */}
           {isSmallNav && (
             <button className="cursor-pointer p-1" onClick={() => setIsMenuOpen((prev) => !prev)} aria-label="Toggle menu">
-              {isMenuOpen ? <IoCloseOutline className="text-4xl text-black" /> : <RxHamburgerMenu className="text-3xl text-black" />}
+              {isMenuOpen ? <CgClose className="text-3xl text-black" /> : <HiBars2 className="text-3xl text-black" />}
             </button>
           )}
         </div>
@@ -226,7 +226,21 @@ function Navbar() {
                   opacity: isMenuOpen ? 1 : 0,
                 }}
               >
-                <Link to={link.id} spy smooth offset={-10} duration={500} activeClass="active" onClick={() => setIsMenuOpen(false)} className="cursor-pointer font-medium text-black hover:opacity-60 transition-opacity duration-200">
+                <Link
+                  to={link.id}
+                  spy
+                  smooth
+                  offset={-10}
+                  duration={500}
+                  activeClass="active"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`cursor-pointer font-medium relative
+                    before:content-[''] before:absolute before:bottom-[-4px] before:left-0
+                    before:w-0 before:h-[2px] before:bg-black
+                    hover:before:w-full before:transition-all before:duration-300
+                    active:before:w-full
+                    ${isBottom ? "text-black" : "text-black"}`}
+                >
                   {link.title}
                 </Link>
               </li>
@@ -239,9 +253,9 @@ function Navbar() {
             offset={-10}
             duration={500}
             onClick={() => setIsMenuOpen(false)}
-            className="cursor-pointer w-full py-3 flex gap-2 items-center justify-center
-              font-semibold rounded-full bg-black text-white
-              hover:bg-yellow-400 hover:text-black hover:scale-105 transition-all duration-150"
+            className={`cursor-pointer w-full py-3 flex gap-2 items-center justify-center
+              font-semibold rounded-full transition-all duration-150
+              ${isBottom ? "bg-white text-black hover:bg-black hover:text-white" : "bg-black text-white hover:bg-yellow-400 hover:text-black"}`}
           >
             <FaWhatsapp className="text-xl" />
             Konsultasi

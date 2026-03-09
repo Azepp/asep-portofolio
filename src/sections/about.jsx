@@ -2,18 +2,20 @@ import { Element } from "react-scroll";
 import { motion } from "framer-motion";
 import containerVariants from "../animations/containerVariants";
 import slideDownVariants from "../animations/slideDownVariants";
-import workList from "../constants/workList";
 import slideUpVariants from "../animations/slideUpVariants";
 import imgAbout from "../assets/img/zidane.png";
 import { FaRegCircleCheck } from "react-icons/fa6";
+import useIsInView from "../hooks/useInView";
 
 const About = () => {
+  const { ref, hasBeenInView } = useIsInView(0.2);
+
   return (
     <Element name="about" id="about" className="pt-[120px]">
-      <motion.div className="flex flex-col gap-6 lg:grid grid-cols-2" variants={containerVariants}>
-        <div className="flex justify-center h-[300px] md:h-[40vh] lg:h-[90vh]">
+      <motion.div ref={ref} className="flex flex-col gap-6 lg:grid grid-cols-2" variants={containerVariants} initial="hidden" animate={hasBeenInView ? "visible" : "hidden"}>
+        <motion.div variants={slideUpVariants} className="flex justify-center h-[300px] md:h-[40vh] lg:h-[90vh]">
           <img src={imgAbout} alt="About AsepStudio" className="object-contain rounded-md" />
-        </div>
+        </motion.div>
 
         <div className="title flex flex-col justify-center gap-4 lg:pe-16">
           <motion.h1 variants={slideDownVariants} className="text-3xl md:text-5xl font-semibold tracking-tighter">
@@ -29,7 +31,7 @@ const About = () => {
             <br />
             Dengan pengalaman membangun berbagai jenis website seperti company profile, landing page, dan website bisnis, AsepStudio siap membantu Anda memiliki website yang:
           </motion.p>
-          <ul className="flex flex-col gap-2 mt-2">
+          <motion.ul variants={slideUpVariants} className="flex flex-col gap-2 mt-2">
             <li className="flex items-center gap-2">
               <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Desain modern dan profesional
             </li>
@@ -39,7 +41,7 @@ const About = () => {
             <li className="flex items-center gap-2">
               <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Dibangun sesuai kebutuhan bisnis Anda
             </li>
-          </ul>
+          </motion.ul>
         </div>
       </motion.div>
     </Element>

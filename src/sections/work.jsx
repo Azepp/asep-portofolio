@@ -46,15 +46,17 @@ const Work = () => {
           </AnimatePresence>
         </div>
 
-        <motion.button
-          onClick={() => setShowAll(!showAll)}
-          className="py-4 px-6 border border-black text-black font-medium md:text-md rounded-full hover:text-black hover:bg-yellow-400 w-fit"
-          variants={buttonVariants}
-          whileHover="hover"
-          whileTap="tap"
-        >
-          {showAll ? "Sembunyikan" : "Lihat Lebih Banyak"}
-        </motion.button>
+        {workList.length > 4 && !showAll && (
+          <motion.button
+            onClick={() => setShowAll(true)}
+            className="py-4 px-6 border border-black text-black font-medium md:text-md rounded-full hover:text-black hover:bg-yellow-400 w-fit"
+            variants={buttonVariants}
+            whileHover="hover"
+            whileTap="tap"
+          >
+            Lihat Lebih Banyak
+          </motion.button>
+        )}
       </motion.div>
     </Element>
   );
