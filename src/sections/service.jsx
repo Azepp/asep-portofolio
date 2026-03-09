@@ -27,7 +27,7 @@ const Service = () => {
           {serviceList.map((service, index) => (
             <div key={index} className="flex flex-col justify-center items-center relative">
               {service.bestSeller && (
-                <div className="bg-custom-yellow rounded-t-lg px-5 pt-3 pb-3 text-center absolute top-0 lg:-top-12 w-[94%] md:w-2/3 lg:w-full">
+                <div className="bg-custom-yellow rounded-t-lg px-5 pt-3 pb-3 text-center absolute -top-0.5 md:top-0 lg:-top-12 w-[calc(100%-0.5rem)] md:w-2/3 lg:w-full">
                   <span className=" font-medium tracking-tight text-lg">Paling Banyak Dipesan</span>
                 </div>
               )}
