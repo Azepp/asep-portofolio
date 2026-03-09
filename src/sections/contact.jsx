@@ -14,6 +14,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const { ref, hasBeenInView } = useIsInView(0.3);
+  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20web%20design%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
 
   return (
     <Element name="contact" id="contact" className="bg-black h-[100vh] mt-[80px] pt-[80px] flex justify-center items-center px-4 md:px-6 lg:px-18 relative">
@@ -29,13 +30,13 @@ const Contact = () => {
           AsepStudio membantu bisnis membangun website modern yang <br className="hidden md:block" /> tidak hanya terlihat profesional, tetapi juga memperkuat brand <br className="hidden md:block" /> dan meningkatkan kepercayaan pelanggan.
         </motion.p>
 
-        <motion.div variants={fadeUpVariants}>
-          <a href="" target="_blank" rel="noopener noreferrer" className="cursor-pointer z-20 flex justify-center">
-            <motion.div className="flex gap-2 items-center py-3 px-6 w-fit md:text-2xl font-semibold md:text-md rounded-full bg-custom-yellow text-black" variants={buttonVariants} whileHover="hover" whileTap="tap">
+        <motion.div variants={fadeUpVariants} className="flex justify-center">
+          <button onClick={handleClick} className="cursor-pointer z-20">
+            <motion.div className="flex gap-2 items-center py-4 px-6 w-fit md:text-xl font-semibold rounded-full bg-custom-yellow text-black" variants={buttonVariants} whileHover="hover" whileTap="tap">
               <FaWhatsapp className="text-3xl" />
               Konsultasi Sekarang
             </motion.div>
-          </a>
+          </button>
         </motion.div>
 
         <motion.div variants={fadeUpVariants} className="flex gap-10 md:gap-12 justify-center text-base md:text-lg">

@@ -11,6 +11,7 @@ import slideDownVariants from "../animations/slideDownVariants";
 
 const Home = () => {
   const { ref, hasBeenInView } = useIsInView(0.3);
+  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20web%20design%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
 
   return (
     <Element name="home" id="home" className="relative h-[80vh] py-4 flex justify-center items-center pt-[100px] scroll-mt-[80px]">
@@ -22,18 +23,18 @@ const Home = () => {
             Website Profesional untuk <br /> Bisnis yang Ingin Naik Level{" "}
           </motion.h1>
           <motion.p className="text-sm md:text-lg text-center" variants={slideUpVariants}>
-            AsepStudio membantu bisnis dan brand membangun website modern <br className="hidden md:inline"/> yang meningkatkan kepercayaan pelanggan dan memperkuat kehadiran digital mereka.{" "}
+            AsepStudio membantu bisnis dan brand membangun website modern <br className="hidden md:inline" /> yang meningkatkan kepercayaan pelanggan dan memperkuat kehadiran digital mereka.{" "}
           </motion.p>
         </motion.div>
 
         {/* Bottom Section */}
         <motion.div className="top-text flex flex-col md:flex-row gap-4 justify-center items-center md:items-end" variants={fadeUpVariants}>
-          <Link to="work" spy={true} smooth={true} offset={-10} duration={500} className="cursor-pointer z-20">
+          <button onClick={handleClick} className="cursor-pointer z-20">
             <motion.div className="py-4 px-6 bg-black flex gap-1 text-white font-medium md:text-md rounded-full hover:text-black hover:bg-yellow-400" variants={buttonVariants} whileHover="hover" whileTap="tap">
               <FaWhatsapp className="text-2xl" />
               Konsultasi Sekarang
             </motion.div>
-          </Link>
+          </button>
           <Link to="work" spy={true} smooth={true} offset={-10} duration={500} className="cursor-pointer z-20">
             <motion.div className="py-4 px-6 border border-black text-black font-medium md:text-md rounded-full hover:text-black hover:bg-yellow-400" variants={buttonVariants} whileHover="hover" whileTap="tap">
               🚀 Lihat Portofolio

@@ -12,6 +12,7 @@ function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const rafRef = useRef(null);
+  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20web%20design%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
 
   useEffect(() => {
     const checkBreakpoint = () => {
@@ -166,19 +167,20 @@ function Navbar() {
                   position: fullNavOpacity < 0.05 ? "absolute" : "relative",
                 }}
               >
-                <Link
+                <button
                   to="contact"
                   spy
                   smooth
                   offset={-10}
                   duration={500}
+                  onClick={handleClick}
                   className={`cursor-pointer py-3 flex gap-1 items-center px-6 font-semibold rounded-full
                     hover:scale-105 transition-all duration-150
                     ${isBottom ? "bg-black text-white hover:bg-gray-800" : "bg-black text-white hover:text-black hover:bg-yellow-400"}`}
                 >
                   <FaWhatsapp className="text-xl" />
                   Konsultasi
-                </Link>
+                </button>
               </div>
 
               {/* Hamburger — fade in */}
@@ -246,20 +248,20 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <Link
+          <button
             to="contact"
             spy
             smooth
             offset={-10}
             duration={500}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={handleClick}
             className={`cursor-pointer w-full py-3 flex gap-2 items-center justify-center
               font-semibold rounded-full transition-all duration-150
               ${isBottom ? "bg-white text-black hover:bg-black hover:text-white" : "bg-black text-white hover:bg-yellow-400 hover:text-black"}`}
           >
             <FaWhatsapp className="text-xl" />
             Konsultasi
-          </Link>
+          </button>
         </div>
       </nav>
     </div>
