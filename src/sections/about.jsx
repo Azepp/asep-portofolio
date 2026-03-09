@@ -10,8 +10,8 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 const About = () => {
   return (
     <Element name="about" id="about" className="pt-[120px]">
-      <motion.div className="flex flex-col gap-6 md:grid grid-cols-2" variants={containerVariants}>
-        <div className="flex justify-center h-[300px] md:h-[90vh]">
+      <motion.div className="flex flex-col gap-6 lg:grid grid-cols-2" variants={containerVariants}>
+        <div className="flex justify-center h-[300px] md:h-[40vh] lg:h-[90vh]">
           <img src={imgAbout} alt="About AsepStudio" className="object-contain rounded-md" />
         </div>
 

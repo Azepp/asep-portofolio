@@ -23,7 +23,7 @@ const Work = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 w-full">
+        <div className="grid md:grid-cols-2 gap-6 w-full">
           <AnimatePresence initial={false}>
             {visibleWork.map((work, index) => (
               <motion.a

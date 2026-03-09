@@ -23,19 +23,19 @@ const Service = () => {
           </motion.p>
         </div>
 
-        <motion.div variants={slideUpVariants} className="grid lg:grid-cols-3 gap-10 md:gap-6 items-stretch">
+        <motion.div variants={slideUpVariants} className="grid lg:grid-cols-3 gap-10 lg:gap-6 items-stretch">
           {serviceList.map((service, index) => (
-            <div key={index} className="flex flex-col relative">
+            <div key={index} className="flex flex-col justify-center items-center relative">
               {service.bestSeller && (
-                <div className="bg-custom-yellow rounded-t-lg px-5 pt-3 pb-3 text-center absolute top-2 md:-top-12 w-full">
+                <div className="bg-custom-yellow rounded-t-lg px-5 pt-3 pb-3 text-center absolute top-2 lg:-top-12 md:w-2/3 lg:w-full">
                   <span className=" font-medium tracking-tight text-lg">Paling Banyak Dipesan</span>
                 </div>
               )}
 
               <motion.div
                 variants={service.animation}
-                className={`flex flex-col flex-1 px-5 py-7
-          ${service.bestSeller ? "border-4 border-custom-yellow rounded-lg shadow-md mt-12 md:mt-0" : "border border-neutral-300 rounded-lg shadow-md"}`}
+                className={`flex flex-col flex-1 px-5 py-7 md:w-2/3 lg:w-full
+          ${service.bestSeller ? "border-4 border-custom-yellow rounded-lg shadow-md mt-12 lg:mt-0" : "border border-neutral-300 rounded-lg shadow-md"}`}
               >
                 <div className="flex flex-col gap-2 flex-1">
                   <h2 className="text-3xl font-semibold tracking-tight">{service.title}</h2>
