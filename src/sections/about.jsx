@@ -28,18 +28,18 @@ const About = () => {
             <br />
             <br />
             Dengan pengalaman membangun berbagai jenis website seperti company profile, landing page, dan website bisnis, AsepStudio siap membantu Anda memiliki website yang:
-            <ul className="flex flex-col gap-2 mt-2">
-              <li className="flex items-center gap-2">
-                <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Desain modern dan profesional
-              </li>
-              <li className="flex items-center gap-2">
-                <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Responsif di semua perangkat
-              </li>
-              <li className="flex items-center gap-2">
-                <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Dibangun sesuai kebutuhan bisnis Anda
-              </li>
-            </ul>
           </motion.p>
+          <ul className="flex flex-col gap-2 mt-2">
+            <li className="flex items-center gap-2">
+              <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Desain modern dan profesional
+            </li>
+            <li className="flex items-center gap-2">
+              <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Responsif di semua perangkat
+            </li>
+            <li className="flex items-center gap-2">
+              <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Dibangun sesuai kebutuhan bisnis Anda
+            </li>
+          </ul>
         </div>
       </motion.div>
     </Element>
