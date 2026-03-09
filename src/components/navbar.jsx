@@ -95,7 +95,7 @@ function Navbar() {
         left: "50%",
         transform: "translateX(-50%)",
         borderRadius: "3rem",
-        backgroundColor: isBottom ? `rgba(234,179,8,1)` : `rgba(255,255,255,1)`,
+        backgroundColor: isBottom ? `rgba(234,179,8,1)` : `rgba(255,255,255,${scrollProgress})`,
         paddingLeft: `${lerp(0, 24, scrollProgress)}px`,
         paddingRight: `${lerp(0, 16, scrollProgress)}px`,
         paddingTop: "16px",
