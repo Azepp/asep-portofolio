@@ -11,7 +11,7 @@ import slideDownVariants from "../animations/slideDownVariants";
 
 const Home = () => {
   const { ref, hasBeenInView } = useIsInView(0.3);
-  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20web%20design%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
+  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20website%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
 
   return (
     <Element name="home" id="home" className="relative h-[80vh] py-4 flex justify-center items-center pt-[100px] scroll-mt-[80px]">

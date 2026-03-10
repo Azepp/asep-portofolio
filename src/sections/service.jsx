@@ -10,7 +10,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Service = () => {
   const { ref, hasBeenInView } = useIsInView(0.2);
-  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20web%20design%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
+  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20website%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
 
   return (
     <Element name="service" id="service" className="scroll-mt-[280px] pt-[80px]">

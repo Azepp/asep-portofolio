@@ -12,7 +12,7 @@ function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const rafRef = useRef(null);
-  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20web%20design%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
+  const handleClick = () => window.open("https://wa.me/6281298298245?text=Halo%20Asep%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20website%20untuk%20bisnis%20saya.%20Boleh%20konsultasi%3F", "_blank");
 
   useEffect(() => {
     const checkBreakpoint = () => {
