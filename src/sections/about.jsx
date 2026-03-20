@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import containerVariants from "../animations/containerVariants";
 import slideDownVariants from "../animations/slideDownVariants";
 import slideUpVariants from "../animations/slideUpVariants";

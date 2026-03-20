@@ -6,8 +6,16 @@ import smdprint from "../assets/img/work/smdprint.webp";
 import barakahLaptop from "../assets/img/work/barakah_laptop.webp";
 import luxtractorsTab from "../assets/img/work/luxtractors_tab_landscape.webp";
 import sofaLaptop from "../assets/img/work/sofa_laptop.webp";
+import dailyGround from "../assets/img/work/dailyground.webp";
 
 const workList = [
+  {
+    name: "Daily Ground Coffee",
+    image: dailyGround,
+    link: "https://dailygroundcoffee.vercel.app/",
+    category: "Website Development",
+    animation: slideRightVariants,
+  },
   {
     name: "Luxtractors",
     image: luxtractorsTab,

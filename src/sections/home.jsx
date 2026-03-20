@@ -1,5 +1,5 @@
 import { Element, Link } from "react-scroll";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import AnimatedBg from "../components/bgGradient";
 import containerVariants from "../animations/containerVariants";
 import fadeUpVariants from "../animations/fadeUpVariants";
@@ -19,7 +19,7 @@ const Home = () => {
         <AnimatedBg />
 
         <motion.div className="top-text flex flex-col gap-6 items-center justify-center mb-12" variants={fadeUpVariants}>
-          <motion.h1 className="text-3xl md:text-5xl lg:text-7xl font-semibold flex items-center tracking-tighter" variants={slideDownVariants}>
+          <motion.h1 className="text-3xl md:text-5xl lg:text-7xl font-semibold text-center flex items-center tracking-tighter" variants={slideDownVariants}>
             Website Profesional untuk <br /> Bisnis yang Ingin Naik Level{" "}
           </motion.h1>
           <motion.p className="text-sm md:text-lg text-center" variants={slideUpVariants}>

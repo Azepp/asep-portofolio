@@ -1,5 +1,5 @@
 import { Element, Link } from "react-scroll";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import useIsInView from "../hooks/useInView";
 import containerVariants from "../animations/containerVariants";
 import buttonVariants from "../animations/buttonVariants";

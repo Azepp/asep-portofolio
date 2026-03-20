@@ -7,9 +7,16 @@ import luxtractorsLaptop from "../assets/img/work/luxtractors_laptop.webp";
 import luxtractorsTab from "../assets/img/work/luxtractors_tab.webp";
 import sofaLaptop from "../assets/img/work/sofa_laptop.webp";
 import sofaPhone from "../assets/img/work/sofa_phone.webp";
+import dailyGround from "../assets/img/work/dailyground.webp";
 
-// Pola: 268 (offsetY) → 400 (no offset) → 268 (offsetY) → 400 (no offset) → ...
 const imagesHomeList = [
+  {
+    name: "Barakah Safar Travel",
+    image: barakahLaptop,
+    link: "https://www.figma.com/design/OEY7c9IDrLAV7viiY6WtaC/AsepStudio-Portfolio?node-id=0-1&t=fpNYdcEH32jePBlQ-1",
+    category: "Website Design",
+    width: "400px",
+  },
   {
     name: "Luxtractors",
     image: luxtractorsLaptop,
@@ -33,13 +40,15 @@ const imagesHomeList = [
     width: "268px",
     offsetY: "40px",
   },
+
   {
-    name: "Barakah Safar Travel",
-    image: barakahLaptop,
-    link: "https://www.figma.com/design/OEY7c9IDrLAV7viiY6WtaC/AsepStudio-Portfolio?node-id=0-1&t=fpNYdcEH32jePBlQ-1",
-    category: "Website Design",
+    name: "Daily Ground Coffee",
+    image: dailyGround,
+    link: "https://dailygroundcoffee.vercel.app/",
+    category: "Website Development",
     width: "400px",
   },
+
   {
     name: "IT Club",
     image: itclub,

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import imagesHomeList from "../constants/imagesHomeList";
 import { MdOutlineArrowOutward } from "react-icons/md";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import useIsInView from "../hooks/useInView";
 
 const ImagesHome = ({ gap = "24px", cardHeight = "300px" }) => {
