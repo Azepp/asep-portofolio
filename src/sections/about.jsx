@@ -31,7 +31,7 @@ const About = () => {
             <br />
             Dengan pengalaman membangun berbagai jenis website seperti company profile, landing page, dan website bisnis, AsepStudio siap membantu Anda memiliki website yang:
           </motion.p>
-          <motion.ul variants={slideUpVariants} className="flex flex-col gap-2 mt-2">
+          <motion.ul variants={slideUpVariants} className="flex flex-col gap-2 mt-2 md:text-lg">
             <li className="flex items-center gap-2">
               <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Desain modern dan profesional
             </li>
