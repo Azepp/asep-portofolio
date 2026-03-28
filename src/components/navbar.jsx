@@ -95,8 +95,8 @@ function Navbar() {
   // ── Mobile: pill, width tetap 90% ──
   const mobileStyles = isMobile
     ? {
-        width: "90%",
-        top: "12px",
+        width: `${lerp(100, 94, scrollProgress)}%`,
+        top: `${lerp(4, 12, scrollProgress)}px`,
         left: "50%",
         transform: "translateX(-50%)",
         borderRadius: "3rem",
