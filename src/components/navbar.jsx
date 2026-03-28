@@ -72,21 +72,25 @@ function Navbar() {
     : {};
 
   // ── Tablet: morph dari full-width ke pill 40% ──
-  const tabletStyles = isTablet
-    ? {
-        width: `${lerp(100, 40, scrollProgress)}%`,
-        top: `${lerp(0, 12, scrollProgress)}px`,
-        left: "50%",
-        transform: "translateX(-50%)",
-        paddingLeft: `${lerp(32, 24, scrollProgress)}px`,
-        paddingRight: `${lerp(32, 16, scrollProgress)}px`,
-        paddingTop: "16px",
-        paddingBottom: "16px",
-        borderRadius: "3rem",
-        backgroundColor: bgColor,
-        boxShadow: shadow,
-      }
-    : {};
+ const tabletStyles = isTablet
+   ? {
+       width: `${lerp(100, 40, scrollProgress)}%`,
+       top: `${lerp(0, 12, scrollProgress)}px`,
+       left: "50%",
+       transform: "translateX(-50%)",
+       paddingLeft: `${lerp(32, 24, scrollProgress)}px`,
+       paddingRight: `${lerp(32, 16, scrollProgress)}px`,
+       paddingTop: "16px",
+       paddingBottom: "16px",
+       borderRadius: "3rem",
+       backgroundColor: isBottom
+         ? `rgba(234,179,8,1)`
+         : isMenuOpen
+           ? `rgba(255,255,255,1)` // ← sama
+           : `rgba(255,255,255,${scrollProgress})`,
+       boxShadow: shadow,
+     }
+   : {};
 
   // ── Mobile: pill, width tetap 90% ──
   const mobileStyles = isMobile
@@ -96,7 +100,11 @@ function Navbar() {
         left: "50%",
         transform: "translateX(-50%)",
         borderRadius: "3rem",
-        backgroundColor: isBottom ? `rgba(234,179,8,1)` : `rgba(255,255,255,${scrollProgress})`,
+        backgroundColor: isBottom
+          ? `rgba(234,179,8,1)`
+          : isMenuOpen
+            ? `rgba(255,255,255,1)` // ← putih solid kalau menu terbuka
+            : `rgba(255,255,255,${Math.max(scrollProgress, 0)})`,
         paddingLeft: `${lerp(0, 24, scrollProgress)}px`,
         paddingRight: `${lerp(0, 16, scrollProgress)}px`,
         paddingTop: "16px",
