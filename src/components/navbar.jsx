@@ -105,8 +105,8 @@ function Navbar() {
           : isMenuOpen
             ? `rgba(255,255,255,1)` // ← putih solid kalau menu terbuka
             : `rgba(255,255,255,${Math.max(scrollProgress, 0)})`,
-        paddingLeft: `${lerp(0, 24, scrollProgress)}px`,
-        paddingRight: `${lerp(0, 16, scrollProgress)}px`,
+        paddingLeft: `${lerp(16, 24, scrollProgress)}px`,
+        paddingRight: `${lerp(16, 16, scrollProgress)}px`,
         paddingTop: "16px",
         paddingBottom: "16px",
         boxShadow: shadow,
