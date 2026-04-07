@@ -26,7 +26,7 @@ const workList = [
   {
     name: "Barakah Safar Travel",
     image: barakahLaptop,
-    link: "https://www.figma.com/design/OEY7c9IDrLAV7viiY6WtaC/AsepStudio-Portfolio?node-id=0-1&t=fpNYdcEH32jePBlQ-1",
+    link: "https://barakah-safar.vercel.app/",
     category: "Website Design",
     animation: slideRightVariants,
   },
