@@ -19,7 +19,7 @@ const serviceList = [
           <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Gratis Domain (.com)
         </li>
         <li className="flex items-center gap-2">
-          <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Hosting 6 Bulan
+          <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> Hosting 1 Tahun
         </li>
         <li className="flex items-center gap-2">
           <FaRegCircleCheck className="shrink-0 text-lg text-green-600" /> 1 Email Bisnis (xxx@bisnis.com)
